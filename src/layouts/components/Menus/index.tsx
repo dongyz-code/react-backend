@@ -14,10 +14,7 @@ const Menus = ({ menus }: props) => {
     if (!routes || !routes.length) return []
     return getParentIds(key, routes) || []
   }
-  const defaultSelect = [pathname]
   const defaultOpenKeys = findDefaultOpenKeys(pathname, menus)
-
-  console.log(defaultOpenKeys)
 
   const onSelect: MenuProps['onSelect'] = ({ key }) => {
     navigate({
@@ -29,7 +26,7 @@ const Menus = ({ menus }: props) => {
     <Menu
       items={menus}
       defaultOpenKeys={defaultOpenKeys}
-      defaultSelectedKeys={defaultSelect}
+      selectedKeys={[pathname]}
       mode="inline"
       theme="dark"
       onSelect={onSelect}

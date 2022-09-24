@@ -15,6 +15,12 @@ export const combineUrl = (baseUrl: string, relativeUrl: string) => {
   return baseUrl + '/' + relativeUrl
 }
 
+/**
+ * 获取所有父级id list
+ * @param id 要查找的id
+ * @param tree
+ * @param fieldNames
+ */
 export const getParentIds = (id: string, tree: any[], fieldNames = { id: 'key', children: 'children' }) => {
   function dfs(id: string, tree: any[], parents: string[] = []) {
     for (let i = 0; i < tree.length; i++) {

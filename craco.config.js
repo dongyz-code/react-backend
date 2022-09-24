@@ -1,6 +1,7 @@
 const path = require('path')
 const CracoLessPlugin = require('craco-less')
 const WebpackBar = require('webpackbar')
+const CracoEsbuildPlugin = require('craco-esbuild')
 
 module.exports = {
   plugins: [
@@ -18,6 +19,8 @@ module.exports = {
           },
         },
       }
+    }, {
+      plugin: CracoEsbuildPlugin,
     }
   ],
   webpack: {
@@ -30,6 +33,6 @@ module.exports = {
   },
   devServer: {
     port: 8080,
-    open: false
+    open: false,
   }
 }

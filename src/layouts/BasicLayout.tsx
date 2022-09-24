@@ -4,6 +4,7 @@ import { Outlet } from 'react-router-dom'
 import { menus } from '@/config/routes'
 
 import Menus from './components/Menus'
+import Breadcrumb from './components/Breadcrumb'
 import css from './basicLayout.module.less'
 
 const { Sider, Header, Content, Footer } = Layout
@@ -21,6 +22,7 @@ const BlankLayout: React.FC = () => {
       <Layout>
         <Header className="app_header"></Header>
         <Content className="app_content">
+          <Breadcrumb />
           <Outlet></Outlet>
         </Content>
         <Footer className="app_footer">React Template ©2022 Created by Dong</Footer>
