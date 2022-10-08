@@ -47,12 +47,12 @@ const transformMenuByRoutes = (routes?: Route[], parentPath = ''): any => {
     })
     .map((route) => {
       const { name, children, path, icon } = route
-      const complatePath = combineUrl(parentPath, path)
+      const completePath = combineUrl(parentPath, path)
       return {
-        key: complatePath,
+        key: completePath,
         label: name,
         icon,
-        children: transformMenuByRoutes(children, complatePath)
+        children: transformMenuByRoutes(children, completePath)
       }
     })
 }
