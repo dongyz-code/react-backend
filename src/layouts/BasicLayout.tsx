@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Layout } from 'antd'
+import { MenuFoldOutlined, MenuUnfoldOutlined } from '@ant-design/icons'
 import { Outlet } from 'react-router-dom'
 import { menus } from '@/config/routes'
 
@@ -14,15 +15,20 @@ const BlankLayout: React.FC = () => {
 
   return (
     <Layout className={css.basic_layout} style={{ minHeight: '100vh' }}>
-      <Sider collapsible collapsed={collapsed} onCollapse={onCollapse} className="app_side">
+      <Sider collapsible collapsed={collapsed} onCollapse={onCollapse} trigger={null} className="app_side">
         <div className="app_side_logo"></div>
         <Menus menus={menus}></Menus>
       </Sider>
 
       <Layout>
-        <Header className="app_header"></Header>
-        <Content className="app_content">
+        <Header className="app_header">
+          <div onClick={() => setCollapsed(!collapsed)} className="app_header_icon">
+            {collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
+          </div>
+
           <Breadcrumb />
+        </Header>
+        <Content className="app_content">
           <Outlet></Outlet>
         </Content>
         <Footer className="app_footer">React Template ©2022 Created by Dong</Footer>

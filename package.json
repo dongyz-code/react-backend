@@ -12,8 +12,9 @@
     "fix": "eslint --fix --ext .js,.jsx,.ts,.tsx src"
   },
   "dependencies": {
+    "@ant-design/icons": "^4.7.0",
     "ahooks": "^3.7.1",
-    "antd": "^4.23.1",
+    "antd": "^4.23.4",
     "axios": "^0.27.2",
     "lodash-es": "^4.17.21",
     "react": "^18.2.0",
