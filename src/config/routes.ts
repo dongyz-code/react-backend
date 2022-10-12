@@ -15,8 +15,8 @@ export const routes: Route[] = [
         path: '/permission',
         children: [
           { path: '', redirect: 'menuList' },
-          { name: '菜单管理', path: 'menuList', component: lazy(() => import('@/pages/Home')) },
-          { name: '角色管理', path: 'roleList', component: lazy(() => import('@/pages/Home')) }
+          { name: '菜单管理', path: 'menuList', component: lazy(() => import('@/pages/AuthorityManage/Menu')) },
+          { name: '角色管理', path: 'roleList', component: lazy(() => import('@/pages/AuthorityManage/Role')) }
         ]
       }
     ]

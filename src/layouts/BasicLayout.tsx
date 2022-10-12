@@ -6,6 +6,7 @@ import { menus } from '@/config/routes'
 
 import Menus from './components/Menus'
 import Breadcrumb from './components/Breadcrumb'
+import RouteTabs from '@/layouts/components/RouteTabs'
 import css from './basicLayout.module.less'
 
 const { Sider, Header, Content, Footer } = Layout
@@ -20,7 +21,7 @@ const BlankLayout: React.FC = () => {
         <Menus menus={menus}></Menus>
       </Sider>
 
-      <Layout>
+      <Layout className="app_right_layout">
         <Header className="app_header">
           <div onClick={() => setCollapsed(!collapsed)} className="app_header_icon">
             {collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
@@ -29,7 +30,9 @@ const BlankLayout: React.FC = () => {
           <Breadcrumb />
         </Header>
         <Content className="app_content">
-          <Outlet></Outlet>
+          <RouteTabs>
+            <Outlet></Outlet>
+          </RouteTabs>
         </Content>
         <Footer className="app_footer">React Template ©2022 Created by Dong</Footer>
       </Layout>
