@@ -3,14 +3,13 @@ import { Layout } from 'antd'
 import { MenuFoldOutlined, MenuUnfoldOutlined } from '@ant-design/icons'
 import { Outlet } from 'react-router-dom'
 import { menus } from '@/config/routes'
-
 import Menus from './components/Menus'
 import Breadcrumb from './components/Breadcrumb'
 import RouteTabs from '@/layouts/components/RouteTabs'
 import css from './basicLayout.module.less'
 
 const { Sider, Header, Content, Footer } = Layout
-const BlankLayout: React.FC = () => {
+const BasicLayout: React.FC = () => {
   const [collapsed, setCollapsed] = useState(false)
   const onCollapse = (collapse: boolean) => setCollapsed(collapse)
 
@@ -40,4 +39,4 @@ const BlankLayout: React.FC = () => {
   )
 }
 
-export default BlankLayout
+export default BasicLayout

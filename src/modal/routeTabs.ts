@@ -12,10 +12,7 @@ interface store {
 }
 
 export const useRouteTabs = create<store>((set) => ({
-  routeTabs: [
-    { label: '菜单管理', key: '/permission/menuList' },
-    { label: '角色管理', key: '/permission/roleList' }
-  ],
+  routeTabs: [],
   addTabs: (tab) => set((state) => ({ routeTabs: [...state.routeTabs, tab] })),
   removeTab: (key) =>
     set((state) => {
