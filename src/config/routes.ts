@@ -26,6 +26,12 @@ export const routes: Route[] = [
     path: '/login',
     component: lazy(() => import('@/pages/Login')),
     hideInMenu: true
+  },
+  {
+    name: '404',
+    path: '*',
+    component: lazy(() => import('@/pages/NotFound')),
+    hideInMenu: true
   }
 ]
 
