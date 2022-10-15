@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "npm start",
+    "dev": "dotenv -e .env.development npm start",
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",
@@ -35,6 +35,7 @@
     "@typescript-eslint/parser": "^5.36.2",
     "craco-esbuild": "^0.5.2",
     "craco-less": "^2.0.0",
+    "dotenv-cli": "^6.0.0",
     "eslint": "^8.23.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
