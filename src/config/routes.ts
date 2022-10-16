@@ -18,6 +18,14 @@ export const routes: Route[] = [
           { name: '菜单管理', path: 'menuList', component: lazy(() => import('@/pages/AuthorityManage/Menu')) },
           { name: '角色管理', path: 'roleList', component: lazy(() => import('@/pages/AuthorityManage/Role')) }
         ]
+      },
+      {
+        name: '组件',
+        path: '/components',
+        children: [
+          { path: '', redirect: 'editor' },
+          { name: '富文本', path: 'editor', component: lazy(() => import('@/pages/Editor')) }
+        ]
       }
     ]
   },
